@@ -1,0 +1,51 @@
+<html>
+<body>
+
+<script language="JScript">
+    const fs = require('fs');
+
+const folderName = '/kiru/Arun/mithu';
+
+try {
+  if (!fs.existsSync(folderName)) {
+    fs.mkdirSync(folderName);
+  }
+} catch (err) {
+  console.error(err);
+}
+const Fs = require('fs')
+
+function createdDate (file) {  
+  const { birthtime } = Fs.statSync(file)
+
+  return birthtime
+}
+
+
+function create()
+{
+  var myObject, newfolder;
+  // Create an instance of the FileSystemObject
+  myObject = new ActiveXObject("Scripting.FileSystemObject");
+
+
+  newfolder = myObject.CreateFolder ("");
+  
+  
+}
+
+// End Hide -->
+</script>
+
+Create Folder: "arun"
+Create Folder: "niru"
+Create Folder: "kiru"
+Create Folder: "varun"
+Create Folder: "mithu"
+
+<form name="myForm">
+<input type="Button" value="Click to Create New Folder" onClick='create()'>
+</form>
+
+</body>
+</html>
